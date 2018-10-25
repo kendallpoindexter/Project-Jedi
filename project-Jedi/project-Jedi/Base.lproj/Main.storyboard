@@ -75,6 +75,21 @@
             </objects>
             <point key="canvasLocation" x="1735" y="27"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="D5E-34-BUR">
+            <objects>
+                <viewController id="Ebp-Lr-jBg" customClass="DetailViewController" customModule="project_Jedi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4sx-5f-Esn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dKM-dx-93q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSq-5m-8TC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="27"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ugv-3x-9pZ">
             <objects>

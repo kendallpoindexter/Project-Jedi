@@ -13,6 +13,7 @@
 		EB8009AC21820CF20047CACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8009AB21820CF20047CACB /* Assets.xcassets */; };
 		EB8009AF21820CF20047CACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */; };
 		EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009B6218210D10047CACB /* CharacterViewController.swift */; };
+		EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009B82182144E0047CACB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EB8009AE21820CF20047CACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB8009B021820CF20047CACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB8009B6218210D10047CACB /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		EB8009B82182144E0047CACB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */,
 				EB8009B021820CF20047CACB /* Info.plist */,
 				EB8009B6218210D10047CACB /* CharacterViewController.swift */,
+				EB8009B82182144E0047CACB /* DetailViewController.swift */,
 			);
 			path = "project-Jedi";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */,
 				EB8009A721820CF00047CACB /* HomeViewController.swift in Sources */,
 				EB8009A521820CF00047CACB /* AppDelegate.swift in Sources */,
+				EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
