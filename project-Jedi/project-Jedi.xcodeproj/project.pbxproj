@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EB8009A521820CF00047CACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009A421820CF00047CACB /* AppDelegate.swift */; };
-		EB8009A721820CF00047CACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009A621820CF00047CACB /* ViewController.swift */; };
+		EB8009A721820CF00047CACB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009A621820CF00047CACB /* HomeViewController.swift */; };
 		EB8009AA21820CF00047CACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8009A821820CF00047CACB /* Main.storyboard */; };
 		EB8009AC21820CF20047CACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8009AB21820CF20047CACB /* Assets.xcassets */; };
 		EB8009AF21820CF20047CACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */; };
+		EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009B6218210D10047CACB /* CharacterViewController.swift */; };
+		EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8009B82182144E0047CACB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB8009A121820CF00047CACB /* project-Jedi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-Jedi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8009A421820CF00047CACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB8009A621820CF00047CACB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB8009A621820CF00047CACB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB8009A921820CF00047CACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB8009AB21820CF20047CACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB8009AE21820CF20047CACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB8009B021820CF20047CACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB8009B6218210D10047CACB /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		EB8009B82182144E0047CACB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				EB8009A421820CF00047CACB /* AppDelegate.swift */,
-				EB8009A621820CF00047CACB /* ViewController.swift */,
+				EB8009A621820CF00047CACB /* HomeViewController.swift */,
 				EB8009A821820CF00047CACB /* Main.storyboard */,
 				EB8009AB21820CF20047CACB /* Assets.xcassets */,
 				EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */,
 				EB8009B021820CF20047CACB /* Info.plist */,
+				EB8009B6218210D10047CACB /* CharacterViewController.swift */,
+				EB8009B82182144E0047CACB /* DetailViewController.swift */,
 			);
 			path = "project-Jedi";
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB8009A721820CF00047CACB /* ViewController.swift in Sources */,
+				EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */,
+				EB8009A721820CF00047CACB /* HomeViewController.swift in Sources */,
 				EB8009A521820CF00047CACB /* AppDelegate.swift in Sources */,
+				EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
