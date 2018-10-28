@@ -17,6 +17,8 @@
 		EBFA16C221860FCE002611C8 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C121860FCE002611C8 /* Film.swift */; };
 		EBFA16C4218612C1002611C8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C3218612C1002611C8 /* Character.swift */; };
 		EBFA16C62186173B002611C8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C52186173B002611C8 /* NetworkService.swift */; };
+		EBFA16C8218628F4002611C8 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C7218628F4002611C8 /* Films.swift */; };
+		EBFA16CA21862B92002611C8 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C921862B92002611C8 /* Characters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EBFA16C121860FCE002611C8 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		EBFA16C3218612C1002611C8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EBFA16C52186173B002611C8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EBFA16C7218628F4002611C8 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		EBFA16C921862B92002611C8 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +82,9 @@
 		EBFA16BD218609F3002611C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBFA16C7218628F4002611C8 /* Films.swift */,
 				EBFA16C121860FCE002611C8 /* Film.swift */,
+				EBFA16C921862B92002611C8 /* Characters.swift */,
 				EBFA16C3218612C1002611C8 /* Character.swift */,
 			);
 			name = Model;
@@ -184,7 +190,9 @@
 			files = (
 				EBFA16C221860FCE002611C8 /* Film.swift in Sources */,
 				EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */,
+				EBFA16C8218628F4002611C8 /* Films.swift in Sources */,
 				EB8009A721820CF00047CACB /* HomeViewController.swift in Sources */,
+				EBFA16CA21862B92002611C8 /* Characters.swift in Sources */,
 				EBFA16C4218612C1002611C8 /* Character.swift in Sources */,
 				EB8009A521820CF00047CACB /* AppDelegate.swift in Sources */,
 				EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */,
