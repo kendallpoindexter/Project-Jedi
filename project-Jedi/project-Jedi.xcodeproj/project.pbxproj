@@ -58,18 +58,13 @@
 		EB8009A321820CF00047CACB /* project-Jedi */ = {
 			isa = PBXGroup;
 			children = (
+				EB8009A421820CF00047CACB /* AppDelegate.swift */,
+				EB8009AB21820CF20047CACB /* Assets.xcassets */,
+				EB8009B021820CF20047CACB /* Info.plist */,
 				EBFA16C021860A36002611C8 /* Networking */,
 				EBFA16BD218609F3002611C8 /* Model */,
 				EBFA16BE21860A03002611C8 /* View */,
 				EBFA16BF21860A14002611C8 /* Controller */,
-				EB8009A421820CF00047CACB /* AppDelegate.swift */,
-				EB8009A621820CF00047CACB /* HomeViewController.swift */,
-				EB8009A821820CF00047CACB /* Main.storyboard */,
-				EB8009AB21820CF20047CACB /* Assets.xcassets */,
-				EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */,
-				EB8009B021820CF20047CACB /* Info.plist */,
-				EB8009B6218210D10047CACB /* CharacterViewController.swift */,
-				EB8009B82182144E0047CACB /* DetailViewController.swift */,
 			);
 			path = "project-Jedi";
 			sourceTree = "<group>";
@@ -84,6 +79,8 @@
 		EBFA16BE21860A03002611C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB8009AD21820CF20047CACB /* LaunchScreen.storyboard */,
+				EB8009A821820CF00047CACB /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,6 +88,9 @@
 		EBFA16BF21860A14002611C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB8009A621820CF00047CACB /* HomeViewController.swift */,
+				EB8009B6218210D10047CACB /* CharacterViewController.swift */,
+				EB8009B82182144E0047CACB /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
