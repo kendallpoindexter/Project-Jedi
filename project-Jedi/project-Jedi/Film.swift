@@ -9,6 +9,6 @@
 import Foundation
 
 struct Film: Decodable {
-    var title: String
-    var characters: [String]
+    let title: String
+    let characters: [String]
 }
