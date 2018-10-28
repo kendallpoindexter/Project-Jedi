@@ -18,12 +18,14 @@ struct NetworkService {
             if let error = error {
                 print("Failure! \(error)")
             } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                if let data = data, let parsedFilm = filmParse(data: data), let parsedCharacter = characterParse(data: data) {
+                if let data = data {
                     if urlString.contains("films") {
+                        guard let parsedFilm = filmParse(data: data) else { return }
                         var film = Film()
                         film = parsedFilm
                         print(film.title, film.characters)
                     } else if urlString.contains("people") {
+                        guard let parsedCharacter = characterParse(data: data) else { return }
                         var person = Person()
                         person = parsedCharacter
                         print(person.name, person.speciesURL)
@@ -59,8 +61,8 @@ struct NetworkService {
     private static func characterParse(data: Data) -> Person? {
         do {
             let decoder = JSONDecoder()
-            let character = try decoder.decode(Person.self, from: data)
-            return character
+            let person = try decoder.decode(Person.self, from: data)
+            return person
         } catch {
             print("Character JSON Error! \(error)")
             return nil
