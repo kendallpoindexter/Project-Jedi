@@ -9,11 +9,24 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    //MARK: - Properties
+    let film = Film()
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    //MARK: - Methods
+    
+    func populatePeopleArray() {
+        
+        for character in film
+    
     }
 
 

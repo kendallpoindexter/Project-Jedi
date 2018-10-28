@@ -10,5 +10,5 @@ import Foundation
 
 class Film: Decodable {
     var title: String = ""
-    var characters: [String] = []
+    var people: [String] = []
 }
