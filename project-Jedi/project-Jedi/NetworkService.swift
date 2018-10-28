@@ -10,4 +10,8 @@ import Foundation
 
 struct NetworkService {
     
+    static func convertURLStrings(with urlString: String) -> URL? {
+        guard let url = URL(string: urlString) else { return nil }
+        return url
+    }
 }
