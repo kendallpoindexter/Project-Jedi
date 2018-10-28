@@ -17,18 +17,24 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
+       
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     //MARK: - Methods
     
-//    func populatePeopleArray() {
-//        for urlStrings in 
-//    }
+    func populatePeopleArray() {
+        for urlStrings in Film.shared.characters {
+            NetworkService.createURLSession(urlString: urlStrings)
+        }
+    }
     
     //MARK: - Actions
     
     @IBAction func episodeTapped(_ sender: UIButton) {
+        populatePeopleArray()
+       
     }
     
 
