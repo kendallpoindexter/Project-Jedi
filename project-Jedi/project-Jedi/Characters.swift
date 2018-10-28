@@ -8,5 +8,5 @@
 
 import Foundation
 class People: Decodable {
-    var peopleArray: [person] = []
+    var peopleArray: [Person] = []
 }

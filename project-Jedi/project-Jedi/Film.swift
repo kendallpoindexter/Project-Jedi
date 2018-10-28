@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Film: Decodable {
-    let title: String
-    let characters: [String]
+class Film: Decodable {
+    var title: String = ""
+    var characters: [String] = []
 }

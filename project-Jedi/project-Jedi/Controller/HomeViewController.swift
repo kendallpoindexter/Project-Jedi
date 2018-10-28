@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
         // Do any additional setup after loading the view, typically from a nib.
     }
 

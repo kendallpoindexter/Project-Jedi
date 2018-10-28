@@ -18,15 +18,15 @@ struct NetworkService {
             if let error = error {
                 print("Failure! \(error)")
             } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                if let data = data {
+                if let data = data, let parsedFilm = filmParse(data: data), let parsedCharacter = characterParse(data: data) {
                     if urlString.contains("films") {
-                        var films = Films().films
-                        films = filmParse(data: data)
-                        print(films[0].title)
+                        var film = Film()
+                        film = parsedFilm
+                        print(film.title, film.characters)
                     } else if urlString.contains("people") {
-                        var people = People().peopleArray
-                        people = characterParse(data: data)
-                        print(people[0].name)
+                        var person = Person()
+                        person = parsedCharacter
+                        print(person.name, person.speciesURL)
                     } else {
                         return
                     }
@@ -45,25 +45,25 @@ struct NetworkService {
         return url
     }
     
-    private static func filmParse(data: Data) -> [Film] {
+    private static func filmParse(data: Data) -> Film? {
         do {
             let decoder = JSONDecoder()
-            let film = try decoder.decode([Film].self, from: data)
+            let film = try decoder.decode(Film.self, from: data)
             return film
         } catch {
             print("Film JSON Error! \(error)")
-            return []
+            return nil
         }
     }
     
-    private static func characterParse(data: Data) -> [person] {
+    private static func characterParse(data: Data) -> Person? {
         do {
             let decoder = JSONDecoder()
-            let character = try decoder.decode([person].self, from: data)
+            let character = try decoder.decode(Person.self, from: data)
             return character
         } catch {
             print("Character JSON Error! \(error)")
-            return []
+            return nil
         }
     }
 }

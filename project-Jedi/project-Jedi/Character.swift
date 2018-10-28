@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct person: Decodable {
-    let name: String
-    let birthYear: String
-    let gender: String
-    let homeworldURL: String
-    let speciesURL: [String]
+class Person: Decodable {
+    let name: String = ""
+    let birthYear: String = ""
+    let gender: String = ""
+    let homeworldURL: String = ""
+    let speciesURL: [String] = []
     
     enum CodingKeys: String, CodingKey {
         case name
