@@ -14,12 +14,14 @@ struct Characters {
     let gender: String
     let homeworldURL: String
     let speciesURL: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case birthYear = "birth_year"
+        case gender
+        case homeworldURL = "homeworld"
+        case speciesURL = "species"
+    }
 }
 
-enum CodingKeys: String, CodingKey {
-    case name
-    case birthYear = "birth_year"
-    case gender
-    case homeworldURL = "homeworld"
-    case speciesURL = "species"
-}
+
