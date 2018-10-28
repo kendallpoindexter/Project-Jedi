@@ -1,5 +1,5 @@
 //
-//  Film.swift
+//  Characters.swift
 //  project-Jedi
 //
 //  Created by Kendall Poindexter on 10/28/18.
@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-class Film: Decodable {
-    var title: String = ""
-    var characters: [String] = []
+class People: Decodable {
+    var peopleArray: [Person] = []
 }
