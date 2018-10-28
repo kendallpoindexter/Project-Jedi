@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Properties
     let film = Film()
-    
+    var peopleArray = People().peopleArray
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -23,11 +23,11 @@ class HomeViewController: UIViewController {
     
     //MARK: - Methods
     
-    func populatePeopleArray() {
-        
-        for character in film
+    //MARK: - Actions
     
+    @IBAction func episodeTapped(_ sender: UIButton) {
     }
+    
 
 
 }

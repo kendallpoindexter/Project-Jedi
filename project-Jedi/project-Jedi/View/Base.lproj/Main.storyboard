@@ -21,6 +21,9 @@
                                 <rect key="frame" x="82" y="292" width="251" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Episode V: The Empire Strikes Back! "/>
+                                <connections>
+                                    <action selector="episodeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5It-vs-tOo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-ww-xba">
                                 <rect key="frame" x="82" y="564" width="251" height="30"/>
