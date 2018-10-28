@@ -11,4 +11,5 @@ import Foundation
 class Film: Decodable {
     var title: String = ""
     var characters: [String] = []
+    static let shared = Film()
 }

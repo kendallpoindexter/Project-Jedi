@@ -11,7 +11,6 @@ import UIKit
 class HomeViewController: UIViewController {
     
     //MARK: - Properties
-    let film = Film()
     var peopleArray = People().peopleArray
     //MARK: - Lifecycle
     
@@ -22,6 +21,10 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - Methods
+    
+//    func populatePeopleArray() {
+//        for urlStrings in 
+//    }
     
     //MARK: - Actions
     
