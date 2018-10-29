@@ -30,8 +30,8 @@ struct NetworkService {
                          person = parsedCharacter
                         People.shared.peopleArray.append(person)
                         print(People.shared.peopleArray)
-                    } else {
-                        return
+                    } else if urlString.contains("planets") {
+                        
                     }
                 
                 }
@@ -75,9 +75,20 @@ struct NetworkService {
             let decoder = JSONDecoder()
             let homeworld = try decoder.decode(Homeworld.self, from: data)
             return homeworld
-        }catch {
-            print("HomeWorld Error \(error)")
+        } catch {
+            print("HomeWorld Error! \(error)")
             return nil 
+        }
+    }
+    
+    private static func speciesParse(data: Data) -> Species? {
+        do {
+            let decoder = JSONDecoder()
+            let species = try decoder.decode(Species.self, from: data)
+            return species
+        } catch {
+            print("Species Error! \(error)")
+            return nil
         }
     }
 }
