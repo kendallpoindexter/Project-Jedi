@@ -1,5 +1,5 @@
 //
-//  Homeworld.swift
+//  Species.swift
 //  project-Jedi
 //
 //  Created by Kendall Poindexter on 10/28/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Homeworld: Decodable {
+class Species: Decodable {
     var name: String = ""
-    static var shared = Homeworld()
+   static var shared = Species()
 }
