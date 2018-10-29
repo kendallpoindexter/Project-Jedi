@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     //MARK: - Properties
+    
     var peopleArray = People().peopleArray
     
     //MARK: - Lifecycle
@@ -36,9 +37,7 @@ class HomeViewController: UIViewController {
     }
   
     @IBAction func viewCharactersTapped(_ sender: UIButton) {
-        
+        //This action triggers the "HomeToCharacterSegue" which is done threw the storyboard
     }
-    
-    
 }
 
