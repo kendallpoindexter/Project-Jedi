@@ -67,6 +67,7 @@ extension CharacterViewController {
         guard let selectedIndex = self.selectedIndex else { return }
         getSpecies(selectedIndex: selectedIndex)
         getHomeworld(selectedIndex: selectedIndex)
+        getFilms(selectedIndex: selectedIndex)
         let detailViewController = segue.destination as? DetailViewController
         detailViewController?.selectedIndex = selectedIndex
         
@@ -85,5 +86,12 @@ extension CharacterViewController {
     func getSpecies(selectedIndex: Int) {
         let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
         NetworkService.getStarWarsData(with: speciesURLString)
+    }
+    
+    func getFilms(selectedIndex: Int) {
+        for urlString in People.shared.peopleArray[selectedIndex].filmURLs {
+            NetworkService.getStarWarsData(with: urlString)
+        }
+       
     }
 }

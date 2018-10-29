@@ -42,7 +42,7 @@ struct NetworkService {
             var person = Person()
             person = parsedCharacter
             People.shared.peopleArray.append(person)
-            print(People.shared.peopleArray[0].mass)
+            print(People.shared.peopleArray[0].filmURLs[0])
         } else {
             return
         }
