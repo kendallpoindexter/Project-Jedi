@@ -30,6 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Characters!"/>
                                 <connections>
+                                    <action selector="viewCharactersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvx-NY-jHs"/>
                                     <segue destination="Kt5-8K-F5x" kind="show" identifier="HomeToCharacterSegue" id="WB0-Qi-UWp"/>
                                 </connections>
                             </button>

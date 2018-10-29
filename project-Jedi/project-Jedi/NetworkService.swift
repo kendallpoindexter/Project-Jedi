@@ -26,9 +26,10 @@ struct NetworkService {
                         print(Film.shared.title, Film.shared.characters)
                     } else if urlString.contains("people") {
                         guard let parsedCharacter = characterParse(data: data) else { return }
-                        //var person = Person()
-                         Person.shared = parsedCharacter
-                        print(Person.shared.name)
+                        var person = Person()
+                         person = parsedCharacter
+                        People.shared.peopleArray.append(person)
+                        print(People.shared.peopleArray)
                     } else {
                         return
                     }
@@ -68,4 +69,5 @@ struct NetworkService {
             return nil
         }
     }
+    
 }

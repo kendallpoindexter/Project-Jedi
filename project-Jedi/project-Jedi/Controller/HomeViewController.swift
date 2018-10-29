@@ -12,13 +12,12 @@ class HomeViewController: UIViewController {
     
     //MARK: - Properties
     var peopleArray = People().peopleArray
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
-       
-       
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -33,11 +32,13 @@ class HomeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func episodeTapped(_ sender: UIButton) {
-        populatePeopleArray()
        
     }
+  
+    @IBAction func viewCharactersTapped(_ sender: UIButton) {
+         populatePeopleArray()
+    }
     
-
-
+    
 }
 
