@@ -10,14 +10,16 @@ import Foundation
 
 class Person: Decodable {
     var name: String = ""
+    var mass: String = ""
     var birthYear: String = ""
     var gender: String = ""
     var homeworldURL: String = ""
     var speciesURL: [String] = []
-    var mass: String = ""
+    
    
     enum CodingKeys: String, CodingKey {
         case name
+        case mass 
         case birthYear = "birth_year"
         case gender
         case homeworldURL = "homeworld"

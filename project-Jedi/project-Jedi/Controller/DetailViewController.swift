@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
         nameLabel.text = People.shared.peopleArray[selectedIndex].name
         birthYearLabel.text = People.shared.peopleArray[selectedIndex].birthYear
         genderLabel.text = People.shared.peopleArray[selectedIndex].gender
+        massLabel.text = People.shared.peopleArray[selectedIndex].mass
         speciesLabel.text = StarWarsData.shared.species
         homeworldLabel.text = StarWarsData.shared.homeworld
     }
