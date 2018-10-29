@@ -204,6 +204,7 @@
                         <outlet property="birthYearLabel" destination="YXO-gI-vJ1" id="cbO-gZ-Kuq"/>
                         <outlet property="genderLabel" destination="0jG-vi-lhc" id="X97-e7-9Qj"/>
                         <outlet property="homeworldLabel" destination="vzA-xH-GVw" id="QyH-ah-9IH"/>
+                        <outlet property="massLabel" destination="DJc-JB-0mZ" id="aeu-Es-ArB"/>
                         <outlet property="nameLabel" destination="Ipj-lN-mRt" id="H7b-m3-9QO"/>
                         <outlet property="speciesLabel" destination="Gk6-fg-uXg" id="Gcl-FF-62U"/>
                     </connections>
