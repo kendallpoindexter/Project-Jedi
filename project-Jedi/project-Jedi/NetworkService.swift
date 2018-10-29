@@ -31,7 +31,15 @@ struct NetworkService {
                         People.shared.peopleArray.append(person)
                         print(People.shared.peopleArray)
                     } else if urlString.contains("planets") {
-                        
+                        guard let parsedHomeworld = homeworldParse(data: data) else { return }
+                        Homeworld.shared = parsedHomeworld
+                        print(Homeworld.shared.name)
+                    } else if urlString.contains("species") {
+                        guard let parsedSpecies = speciesParse(data: data) else { return }
+                        Species.shared = parsedSpecies
+                        print(Species.shared.name)
+                    } else {
+                        return 
                     }
                 
                 }
