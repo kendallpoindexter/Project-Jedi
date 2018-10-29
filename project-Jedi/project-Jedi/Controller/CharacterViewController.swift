@@ -22,6 +22,9 @@ class CharacterViewController: UITableViewController {
     
     //MARK: - Methods
     
+    func configureTitle() {
+       
+    }
 }
 
 //MARK: - TableView Data Source Methods
