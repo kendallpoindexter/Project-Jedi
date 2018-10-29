@@ -38,6 +38,9 @@ class DetailViewController: UIViewController {
         
     }
     
+    func getHomeworld(selectedIndex: Int) {
+        NetworkService.createURLSession(urlString: People.shared.peopleArray[selectedIndex].homeworldURL)
+    }
 
     /*
     // MARK: - Navigation

@@ -13,6 +13,8 @@ class CharacterViewController: UITableViewController {
     //MARK: - Property
     
     var selectedIndex: Int?
+    
+    //MARK:- Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,10 @@ class CharacterViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    //MARK: - Methods
+    
     }
 
     // MARK: - Tableview Data Source
