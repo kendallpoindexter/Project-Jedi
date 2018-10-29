@@ -14,6 +14,7 @@ class Person: Decodable {
     var birthYear: String = ""
     var gender: String = ""
     var homeworldURL: String = ""
+    var filmURLs: [String] = []
     var speciesURL: [String] = []
     
    
@@ -23,6 +24,7 @@ class Person: Decodable {
         case birthYear = "birth_year"
         case gender
         case homeworldURL = "homeworld"
+        case filmURLs = "films"
         case speciesURL = "species"
     }
 }
