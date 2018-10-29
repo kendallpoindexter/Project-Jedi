@@ -13,11 +13,24 @@ class DetailViewController: UIViewController {
     //MARK: - Properties
     
     var selectedIndex: Int?
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLabels()
 
         // Do any additional setup after loading the view.
+    }
+    
+    //MARK: - Methods
+    
+    func setLabels() {
+        guard let selectedIndex = selectedIndex else { return }
+        nameLabel.text = People.shared.peopleArray[selectedIndex].name
     }
     
 
