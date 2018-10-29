@@ -21,19 +21,7 @@ struct NetworkService {
                 print("Failure! \(error)")
             } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 if let data = data {
-                    if urlString.contains("films") {
-                        guard let parsedFilm = filmParse(data: data) else { return }
-                        Film.shared = parsedFilm
-                        print(Film.shared.title, Film.shared.characters)
-                    } else if urlString.contains("people") {
-                        guard let parsedCharacter = characterParse(data: data) else { return }
-                        var person = Person()
-                        person = parsedCharacter
-                        People.shared.peopleArray.append(person)
-                        print(People.shared.peopleArray)
-                    } else {
-                        return
-                    }
+                    storeAsyncData(with: data, with: urlString)
                 }
             } else {
                 guard let response = response else { return}
@@ -41,6 +29,23 @@ struct NetworkService {
             }
         }
         dataTask.resume()
+    }
+    
+    private static func storeAsyncData(with data: Data, with urlString: String) {
+        
+        if urlString.contains("films") {
+            guard let parsedFilm = filmParse(data: data) else { return }
+            Film.shared = parsedFilm
+            print(Film.shared.title, Film.shared.characters)
+        } else if urlString.contains("people") {
+            guard let parsedCharacter = characterParse(data: data) else { return }
+            var person = Person()
+            person = parsedCharacter
+            People.shared.peopleArray.append(person)
+            print(People.shared.peopleArray)
+        } else {
+            return
+        }
     }
 }
 
