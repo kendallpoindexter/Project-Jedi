@@ -70,4 +70,14 @@ struct NetworkService {
         }
     }
     
+    private static func homeworldParse(data: Data) -> Homeworld? {
+        do {
+            let decoder = JSONDecoder()
+            let homeworld = try decoder.decode(Homeworld.self, from: data)
+            return homeworld
+        }catch {
+            print("HomeWorld Error \(error)")
+            return nil 
+        }
+    }
 }
