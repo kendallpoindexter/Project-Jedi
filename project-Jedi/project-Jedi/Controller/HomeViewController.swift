@@ -32,11 +32,12 @@ class HomeViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func episodeTapped(_ sender: UIButton) {
-       
+         populatePeopleArray()
     }
   
     @IBAction func viewCharactersTapped(_ sender: UIButton) {
-         populatePeopleArray()
+       
+        performSegue(withIdentifier: "HomeToCharacterSegue", sender: UIButton())
     }
     
     
