@@ -10,5 +10,5 @@ import Foundation
 
 class Species: Decodable {
     var name: String = ""
-   static var shared = Species()
+   //static var shared = Species()
 }

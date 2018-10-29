@@ -30,16 +30,20 @@ struct NetworkService {
                          person = parsedCharacter
                         People.shared.peopleArray.append(person)
                         print(People.shared.peopleArray)
-                    } else if urlString.contains("planets") {
-                        guard let parsedHomeworld = homeworldParse(data: data) else { return }
-                        Homeworld.shared = parsedHomeworld
-                        print(Homeworld.shared.name)
-                    } else if urlString.contains("species") {
-                        guard let parsedSpecies = speciesParse(data: data) else { return }
-                        Species.shared = parsedSpecies
-                        print(Species.shared.name)
+//                    } else if urlString.contains("planets") {
+//                        guard let parsedHomeworld = homeworldParse(data: data) else { return }
+//                        var homeworld = Homeworld()
+//                        homeworld = parsedHomeworld
+//                        StarWarsData.shared.homeworld = homeworld.name
+//                        print("\(StarWarsData.shared.homeworld) from network layer")
+//                    } else if urlString.contains("species") {
+//                        guard let parsedSpecies = speciesParse(data: data) else { return }
+//                        var species = Species()
+//                        species = parsedSpecies
+//                        StarWarsData.shared.species = species.name
+//                        print("\(StarWarsData.shared.species) from network layer")
                     } else {
-                        return 
+                        return
                     }
                 
                 }
@@ -96,6 +100,41 @@ struct NetworkService {
             return species
         } catch {
             print("Species Error! \(error)")
+            return nil
+        }
+    }
+}
+
+extension NetworkService {
+    
+    static func getStarWarsData(with urlString: String) {
+        guard let url = convertURLStrings(with: urlString) else { return }
+        guard let jsonString = performAPIRequest(with: url) else { return }
+        
+        if urlString.contains("planets") {
+            guard let parsedHomeworld = homeworldParse(data: jsonString) else { return }
+            var homeworld = Homeworld()
+            homeworld = parsedHomeworld
+            StarWarsData.shared.homeworld = homeworld.name
+            print("\(StarWarsData.shared.homeworld) from network layer")
+        } else if urlString.contains("species") {
+            guard let parsedSpecies = speciesParse(data: jsonString) else { return }
+            var species = Species()
+            species = parsedSpecies
+            StarWarsData.shared.species = species.name
+            print("\(StarWarsData.shared.species) from network layer")
+        } else {
+            print("MainSync Network Failure")
+            
+        }
+    }
+    
+    
+    private static func performAPIRequest(with url: URL) -> Data? {
+        do {
+            return try Data(contentsOf: url)
+        } catch {
+            print("Download Error: \(error.localizedDescription)")
             return nil
         }
     }

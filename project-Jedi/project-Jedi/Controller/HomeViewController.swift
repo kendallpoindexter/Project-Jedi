@@ -36,8 +36,7 @@ class HomeViewController: UIViewController {
     }
   
     @IBAction func viewCharactersTapped(_ sender: UIButton) {
-       
-        performSegue(withIdentifier: "HomeToCharacterSegue", sender: UIButton())
+        
     }
     
     

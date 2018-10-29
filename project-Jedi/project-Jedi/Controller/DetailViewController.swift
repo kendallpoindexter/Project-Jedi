@@ -25,36 +25,27 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let selectedIndex = selectedIndex else { return }
-        getHomeworld(selectedIndex: selectedIndex)
-        getSpecies(selectedIndex: selectedIndex)
-        //setLabels()
-
-        // Do any additional setup after loading the view.
+        
+            setLabels()
+        
     }
     
     //MARK: - Methods
+    
+    
     
     func setLabels() {
         guard let selectedIndex = selectedIndex else { return }
         nameLabel.text = People.shared.peopleArray[selectedIndex].name
         birthYearLabel.text = People.shared.peopleArray[selectedIndex].birthYear
         genderLabel.text = People.shared.peopleArray[selectedIndex].gender
-        
+        speciesLabel.text = StarWarsData.shared.species
+        homeworldLabel.text = StarWarsData.shared.homeworld
     }
     
-    func getHomeworld(selectedIndex: Int) {
-        let homeworldURlString = People.shared.peopleArray[selectedIndex].homeworldURL
-        
-        NetworkService.createURLSession(urlString: homeworldURlString)
-    }
     
-    func getSpecies(selectedIndex: Int) {
-        let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
-        
-        NetworkService.createURLSession(urlString: speciesURLString)
-    }
-
+    
+   
     /*
     // MARK: - Navigation
 
