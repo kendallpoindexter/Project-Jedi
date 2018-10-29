@@ -18,39 +18,21 @@ class CharacterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     //MARK: - Methods
     
-    func getHomeworld(selectedIndex: Int) {
-        let homeworldURlString = People.shared.peopleArray[selectedIndex].homeworldURL
-        NetworkService.getStarWarsData(with: homeworldURlString)
-        
-        //NetworkService.createURLSession(urlString: homeworldURlString)
-    }
+}
+
+//MARK: - TableView Data Source Methods
+
+extension CharacterViewController {
     
-    func getSpecies(selectedIndex: Int) {
-        let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
-        NetworkService.getStarWarsData(with: speciesURLString)
-        
-        //NetworkService.createURLSession(urlString: speciesURLString)
-    }
-   
-
-
-    // MARK: - Tableview Data Source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return People.shared.peopleArray.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
@@ -60,25 +42,45 @@ class CharacterViewController: UITableViewController {
         return cell
     }
     
-    //MARK: - TableView Delegate Methods
+}
+
+//MARK: - TableView Delegate Methods
+
+extension CharacterViewController {
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         selectedIndex = indexPath.row
         
         return indexPath
     }
+}
 
-    
-    
-    // MARK: - Navigation
+//MARK: - Navigation
 
+extension CharacterViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-            guard let selectedIndex = self.selectedIndex else { return }
-            getSpecies(selectedIndex: selectedIndex)
-            getHomeworld(selectedIndex: selectedIndex)
-            let detailViewController = segue.destination as? DetailViewController
-            detailViewController?.selectedIndex = selectedIndex
+        guard let selectedIndex = self.selectedIndex else { return }
+        getSpecies(selectedIndex: selectedIndex)
+        getHomeworld(selectedIndex: selectedIndex)
+        let detailViewController = segue.destination as? DetailViewController
+        detailViewController?.selectedIndex = selectedIndex
         
+    }
+}
+
+//MARK: -  Network Request Methods
+
+extension CharacterViewController {
+    
+    func getHomeworld(selectedIndex: Int) {
+        let homeworldURlString = People.shared.peopleArray[selectedIndex].homeworldURL
+        NetworkService.getStarWarsData(with: homeworldURlString)
+    }
+    
+    func getSpecies(selectedIndex: Int) {
+        let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
+        NetworkService.getStarWarsData(with: speciesURLString)
     }
 }
