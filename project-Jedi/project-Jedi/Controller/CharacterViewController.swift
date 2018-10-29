@@ -22,11 +22,6 @@ class CharacterViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return People.shared.peopleArray.count
@@ -35,9 +30,9 @@ class CharacterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
-
-        // Configure the cell...
-
+        
+        cell.textLabel?.text = People.shared.peopleArray[indexPath.row].name
+        
         return cell
     }
     
