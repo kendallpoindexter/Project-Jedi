@@ -54,7 +54,10 @@ class CharacterViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let detailViewController = segue.destination as? DetailViewController
+        
         // Pass the selected object to the new view controller.
+        detailViewController?.selectedIndex = selectedIndex
     }
 
 

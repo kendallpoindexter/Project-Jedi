@@ -9,6 +9,10 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    //MARK: - Properties
+    
+    var selectedIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
