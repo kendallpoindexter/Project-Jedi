@@ -28,7 +28,7 @@ class CharacterViewController: UITableViewController {
     
     //MARK: - Methods
     
-    }
+    
 
     // MARK: - Tableview Data Source
 

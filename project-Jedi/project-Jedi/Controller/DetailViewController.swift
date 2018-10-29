@@ -19,11 +19,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
+    @IBOutlet weak var homeworldLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabels()
+        guard let selectedIndex = selectedIndex else { return }
+        getHomeworld(selectedIndex: selectedIndex)
+        getSpecies(selectedIndex: selectedIndex)
+        //setLabels()
 
         // Do any additional setup after loading the view.
     }
@@ -46,6 +51,7 @@ class DetailViewController: UIViewController {
     
     func getSpecies(selectedIndex: Int) {
         let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
+        
         NetworkService.createURLSession(urlString: speciesURLString)
     }
 
