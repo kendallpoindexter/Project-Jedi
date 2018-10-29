@@ -39,7 +39,14 @@ class DetailViewController: UIViewController {
     }
     
     func getHomeworld(selectedIndex: Int) {
-        NetworkService.createURLSession(urlString: People.shared.peopleArray[selectedIndex].homeworldURL)
+        let homeworldURlString = People.shared.peopleArray[selectedIndex].homeworldURL
+        
+        NetworkService.createURLSession(urlString: homeworldURlString)
+    }
+    
+    func getSpecies(selectedIndex: Int) {
+        let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
+        NetworkService.createURLSession(urlString: speciesURLString)
     }
 
     /*
