@@ -8,6 +8,8 @@
 
 import Foundation
 
+//MARK: - Async URLSession Networking Method
+
 struct NetworkService {
     
     static func createURLSession(urlString: String) {
@@ -21,31 +23,17 @@ struct NetworkService {
                 if let data = data {
                     if urlString.contains("films") {
                         guard let parsedFilm = filmParse(data: data) else { return }
-                        //var film = Film()
                         Film.shared = parsedFilm
                         print(Film.shared.title, Film.shared.characters)
                     } else if urlString.contains("people") {
                         guard let parsedCharacter = characterParse(data: data) else { return }
                         var person = Person()
-                         person = parsedCharacter
+                        person = parsedCharacter
                         People.shared.peopleArray.append(person)
                         print(People.shared.peopleArray)
-//                    } else if urlString.contains("planets") {
-//                        guard let parsedHomeworld = homeworldParse(data: data) else { return }
-//                        var homeworld = Homeworld()
-//                        homeworld = parsedHomeworld
-//                        StarWarsData.shared.homeworld = homeworld.name
-//                        print("\(StarWarsData.shared.homeworld) from network layer")
-//                    } else if urlString.contains("species") {
-//                        guard let parsedSpecies = speciesParse(data: data) else { return }
-//                        var species = Species()
-//                        species = parsedSpecies
-//                        StarWarsData.shared.species = species.name
-//                        print("\(StarWarsData.shared.species) from network layer")
                     } else {
                         return
                     }
-                
                 }
             } else {
                 guard let response = response else { return}
@@ -54,12 +42,9 @@ struct NetworkService {
         }
         dataTask.resume()
     }
-    
-     
-    
-    
 }
 
+//MARK: - Main Thread Networking Method
 extension NetworkService {
     
     static func getStarWarsData(with urlString: String) {
@@ -95,6 +80,8 @@ extension NetworkService {
     }
 }
 
+//MARK: - Convert URL String Into URL Method
+
 extension NetworkService {
     
     private static func convertURLStrings(with urlString: String) -> URL? {
@@ -103,6 +90,8 @@ extension NetworkService {
     }
     
 }
+
+//MARK:- Parse Data Methods
 
 extension NetworkService {
     
