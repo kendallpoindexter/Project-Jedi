@@ -10,5 +10,4 @@ import Foundation
 
 class Homeworld: Decodable {
     var name: String = ""
-    //static var shared = Homeworld()
 }
