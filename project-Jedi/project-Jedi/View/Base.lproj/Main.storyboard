@@ -158,6 +158,8 @@
                         <viewLayoutGuide key="safeArea" id="dKM-dx-93q"/>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="YXO-gI-vJ1" id="cbO-gZ-Kuq"/>
+                        <outlet property="genderLabel" destination="0jG-vi-lhc" id="X97-e7-9Qj"/>
                         <outlet property="nameLabel" destination="Ipj-lN-mRt" id="H7b-m3-9QO"/>
                     </connections>
                 </viewController>

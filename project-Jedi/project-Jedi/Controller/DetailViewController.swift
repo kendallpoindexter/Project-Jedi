@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthYearLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -31,6 +33,9 @@ class DetailViewController: UIViewController {
     func setLabels() {
         guard let selectedIndex = selectedIndex else { return }
         nameLabel.text = People.shared.peopleArray[selectedIndex].name
+        birthYearLabel.text = People.shared.peopleArray[selectedIndex].birthYear
+        genderLabel.text = People.shared.peopleArray[selectedIndex].gender
+        
     }
     
 
