@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: - Async URLSession Networking Method
+//MARK: - Async URLSession Networking Methods
 
 struct NetworkService {
     
@@ -49,7 +49,7 @@ struct NetworkService {
     }
 }
 
-//MARK: - Main Thread Networking Method
+//MARK: - Main Thread Networking Methods
 extension NetworkService {
     
     static func getStarWarsData(with urlString: String) {
