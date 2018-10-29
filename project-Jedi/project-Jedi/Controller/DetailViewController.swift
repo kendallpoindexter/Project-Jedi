@@ -26,9 +26,10 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        navigationController?.navigationBar.barTintColor = .black
         
-            setLabels()
-        
+        setLabels()
     }
     
     //MARK: - Methods
