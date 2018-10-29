@@ -55,54 +55,9 @@ struct NetworkService {
         dataTask.resume()
     }
     
-     private static func convertURLStrings(with urlString: String) -> URL? {
-        guard let url = URL(string: urlString) else { return nil }
-        return url
-    }
+     
     
-    private static func filmParse(data: Data) -> Film? {
-        do {
-            let decoder = JSONDecoder()
-            let film = try decoder.decode(Film.self, from: data)
-            return film
-        } catch {
-            print("Film JSON Error! \(error)")
-            return nil
-        }
-    }
     
-    private static func characterParse(data: Data) -> Person? {
-        do {
-            let decoder = JSONDecoder()
-            let person = try decoder.decode(Person.self, from: data)
-            return person
-        } catch {
-            print("Character JSON Error! \(error)")
-            return nil
-        }
-    }
-    
-    private static func homeworldParse(data: Data) -> Homeworld? {
-        do {
-            let decoder = JSONDecoder()
-            let homeworld = try decoder.decode(Homeworld.self, from: data)
-            return homeworld
-        } catch {
-            print("HomeWorld Error! \(error)")
-            return nil 
-        }
-    }
-    
-    private static func speciesParse(data: Data) -> Species? {
-        do {
-            let decoder = JSONDecoder()
-            let species = try decoder.decode(Species.self, from: data)
-            return species
-        } catch {
-            print("Species Error! \(error)")
-            return nil
-        }
-    }
 }
 
 extension NetworkService {
@@ -135,6 +90,62 @@ extension NetworkService {
             return try Data(contentsOf: url)
         } catch {
             print("Download Error: \(error.localizedDescription)")
+            return nil
+        }
+    }
+}
+
+extension NetworkService {
+    
+    private static func convertURLStrings(with urlString: String) -> URL? {
+        guard let url = URL(string: urlString) else { return nil }
+        return url
+    }
+    
+}
+
+extension NetworkService {
+    
+    private static func filmParse(data: Data) -> Film? {
+        do {
+            let decoder = JSONDecoder()
+            let film = try decoder.decode(Film.self, from: data)
+            return film
+        } catch {
+            print("Film JSON Error! \(error)")
+            return nil
+        }
+    }
+    
+    private static func characterParse(data: Data) -> Person? {
+        do {
+            let decoder = JSONDecoder()
+            let person = try decoder.decode(Person.self, from: data)
+            return person
+        } catch {
+            print("Character JSON Error! \(error)")
+            return nil
+        }
+    }
+    
+    private static func homeworldParse(data: Data) -> Homeworld? {
+        do {
+            let decoder = JSONDecoder()
+            let homeworld = try decoder.decode(Homeworld.self, from: data)
+            return homeworld
+        } catch {
+            print("HomeWorld Error! \(error)")
+            return nil
+        }
+    }
+    
+    private static func speciesParse(data: Data) -> Species? {
+        do {
+            let decoder = JSONDecoder()
+            let species = try decoder.decode(Species.self, from: data)
+            return species
+        } catch {
+            print("Species Error! \(error)")
             return nil
         }
     }
