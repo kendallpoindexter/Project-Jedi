@@ -13,6 +13,8 @@ class CharacterViewController: UITableViewController {
     //MARK: - Property
     
     var selectedIndex: Int?
+    
+    //MARK:- Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,24 @@ class CharacterViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    //MARK: - Methods
+    
+    func getHomeworld(selectedIndex: Int) {
+        let homeworldURlString = People.shared.peopleArray[selectedIndex].homeworldURL
+        NetworkService.getStarWarsData(with: homeworldURlString)
+        
+        //NetworkService.createURLSession(urlString: homeworldURlString)
+    }
+    
+    func getSpecies(selectedIndex: Int) {
+        let speciesURLString = People.shared.peopleArray[selectedIndex].speciesURL[0]
+        NetworkService.getStarWarsData(with: speciesURLString)
+        
+        //NetworkService.createURLSession(urlString: speciesURLString)
+    }
+   
+
 
     // MARK: - Tableview Data Source
 
@@ -53,12 +73,12 @@ class CharacterViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        let detailViewController = segue.destination as? DetailViewController
         
-        // Pass the selected object to the new view controller.
-        detailViewController?.selectedIndex = selectedIndex
+            guard let selectedIndex = self.selectedIndex else { return }
+            getSpecies(selectedIndex: selectedIndex)
+            getHomeworld(selectedIndex: selectedIndex)
+            let detailViewController = segue.destination as? DetailViewController
+            detailViewController?.selectedIndex = selectedIndex
+        
     }
-
-
 }

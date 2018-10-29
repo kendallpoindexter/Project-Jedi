@@ -132,8 +132,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HomeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2l-Ie-dRx">
-                                <rect key="frame" x="20" y="322" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Homeworld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2l-Ie-dRx">
+                                <rect key="frame" x="20" y="322" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -157,6 +157,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dKM-dx-93q"/>
                     </view>
+                    <connections>
+                        <outlet property="birthYearLabel" destination="YXO-gI-vJ1" id="cbO-gZ-Kuq"/>
+                        <outlet property="genderLabel" destination="0jG-vi-lhc" id="X97-e7-9Qj"/>
+                        <outlet property="homeworldLabel" destination="vzA-xH-GVw" id="QyH-ah-9IH"/>
+                        <outlet property="nameLabel" destination="Ipj-lN-mRt" id="H7b-m3-9QO"/>
+                        <outlet property="speciesLabel" destination="Gk6-fg-uXg" id="Gcl-FF-62U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSq-5m-8TC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,6 +18,9 @@
 		EBFA16C4218612C1002611C8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C3218612C1002611C8 /* Character.swift */; };
 		EBFA16C62186173B002611C8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C52186173B002611C8 /* NetworkService.swift */; };
 		EBFA16CA21862B92002611C8 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16C921862B92002611C8 /* Characters.swift */; };
+		EBFA16CC2186A144002611C8 /* Homeworld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16CB2186A144002611C8 /* Homeworld.swift */; };
+		EBFA16CE2186A208002611C8 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16CD2186A208002611C8 /* Species.swift */; };
+		EBFA16D021874437002611C8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA16CF21874437002611C8 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		EBFA16C3218612C1002611C8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EBFA16C52186173B002611C8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EBFA16C921862B92002611C8 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		EBFA16CB2186A144002611C8 /* Homeworld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeworld.swift; sourceTree = "<group>"; };
+		EBFA16CD2186A208002611C8 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		EBFA16CF21874437002611C8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				EBFA16C121860FCE002611C8 /* Film.swift */,
 				EBFA16C921862B92002611C8 /* Characters.swift */,
 				EBFA16C3218612C1002611C8 /* Character.swift */,
+				EBFA16CB2186A144002611C8 /* Homeworld.swift */,
+				EBFA16CD2186A208002611C8 /* Species.swift */,
+				EBFA16CF21874437002611C8 /* Helper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -185,13 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBFA16D021874437002611C8 /* Helper.swift in Sources */,
 				EBFA16C221860FCE002611C8 /* Film.swift in Sources */,
 				EB8009B7218210D10047CACB /* CharacterViewController.swift in Sources */,
 				EB8009A721820CF00047CACB /* HomeViewController.swift in Sources */,
 				EBFA16CA21862B92002611C8 /* Characters.swift in Sources */,
 				EBFA16C4218612C1002611C8 /* Character.swift in Sources */,
 				EB8009A521820CF00047CACB /* AppDelegate.swift in Sources */,
+				EBFA16CC2186A144002611C8 /* Homeworld.swift in Sources */,
 				EB8009B92182144E0047CACB /* DetailViewController.swift in Sources */,
+				EBFA16CE2186A208002611C8 /* Species.swift in Sources */,
 				EBFA16C62186173B002611C8 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
