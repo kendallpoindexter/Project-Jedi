@@ -71,7 +71,7 @@
         <!--Characters-->
         <scene sceneID="avJ-bJ-q5G">
             <objects>
-                <tableViewController title="Characters" id="Kt5-8K-F5x" customClass="CharacterViewController" customModule="project_Jedi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kt5-8K-F5x" customClass="CharacterViewController" customModule="project_Jedi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7S9-rU-NNN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,7 @@
                             <outlet property="delegate" destination="Kt5-8K-F5x" id="kE5-n3-P66"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Characters" largeTitleDisplayMode="always" id="gTS-na-Xsk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBh-cD-kJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

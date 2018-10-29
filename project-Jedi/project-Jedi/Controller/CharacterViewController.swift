@@ -18,6 +18,8 @@ class CharacterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.8830345273, blue: 0, alpha: 1)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     //MARK: - Methods

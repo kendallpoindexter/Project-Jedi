@@ -19,8 +19,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        navigationController?.navigationBar.barTintColor = .black 
+        
         NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     //MARK: - Methods
