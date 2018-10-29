@@ -21,14 +21,15 @@ struct NetworkService {
                 if let data = data {
                     if urlString.contains("films") {
                         guard let parsedFilm = filmParse(data: data) else { return }
-                        var film = Film()
-                        film = parsedFilm
-                        print(film.title, film.characters)
+                        //var film = Film()
+                        Film.shared = parsedFilm
+                        print(Film.shared.title, Film.shared.characters)
                     } else if urlString.contains("people") {
                         guard let parsedCharacter = characterParse(data: data) else { return }
                         var person = Person()
-                        person = parsedCharacter
-                        print(person.name, person.speciesURL)
+                         person = parsedCharacter
+                        People.shared.peopleArray.append(person)
+                        print(People.shared.peopleArray)
                     } else {
                         return
                     }
@@ -68,4 +69,5 @@ struct NetworkService {
             return nil
         }
     }
+    
 }

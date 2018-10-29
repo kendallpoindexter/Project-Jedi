@@ -14,7 +14,7 @@ class Person: Decodable {
     var gender: String = ""
     var homeworldURL: String = ""
     var speciesURL: [String] = []
-    
+   
     enum CodingKeys: String, CodingKey {
         case name
         case birthYear = "birth_year"

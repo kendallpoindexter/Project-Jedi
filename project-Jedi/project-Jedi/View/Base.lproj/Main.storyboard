@@ -21,12 +21,16 @@
                                 <rect key="frame" x="82" y="292" width="251" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Episode V: The Empire Strikes Back! "/>
+                                <connections>
+                                    <action selector="episodeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5It-vs-tOo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-ww-xba">
                                 <rect key="frame" x="82" y="564" width="251" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Characters!"/>
                                 <connections>
+                                    <action selector="viewCharactersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvx-NY-jHs"/>
                                     <segue destination="Kt5-8K-F5x" kind="show" identifier="HomeToCharacterSegue" id="WB0-Qi-UWp"/>
                                 </connections>
                             </button>

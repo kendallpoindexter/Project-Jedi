@@ -9,13 +9,36 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    //MARK: - Properties
+    var peopleArray = People().peopleArray
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkService.createURLSession(urlString: "https://swapi.co/api/people/1/")
+        NetworkService.createURLSession(urlString: "https://swapi.co/api/films/2/")
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    //MARK: - Methods
+    
+    func populatePeopleArray() {
+        for urlStrings in Film.shared.characters {
+            NetworkService.createURLSession(urlString: urlStrings)
+        }
+    }
+    
+    //MARK: - Actions
+    
+    @IBAction func episodeTapped(_ sender: UIButton) {
+       
+    }
+  
+    @IBAction func viewCharactersTapped(_ sender: UIButton) {
+         populatePeopleArray()
+    }
+    
+    
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
-class People: Decodable {
+class People {
     var peopleArray: [Person] = []
+    static var shared = People()
 }
